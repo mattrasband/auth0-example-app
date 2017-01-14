@@ -1,0 +1,29 @@
+security:
+  oauth2:
+    client:
+      client-id: your client id here
+      client-secret: your client secret here
+      # Change you your domain
+      user-authorization-uri: https://crontab.auth0.com/authorize
+      # Change you your domain
+      access-token-uri: https://crontab.auth0.com/oauth/token
+    resource:
+      # Change you your domain
+      user-info-uri: https://crontab.auth0.com/userinfo
+      jwt:
+        # Note the pipe :) These are publicly available
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1nyq5kjHHhD15D10sBXk
+          /+cC3fbwyXP5ND9eFTQLad7nCfuNUFtNZmL3r+JPujb6haSStPXEp26CbbGGEHvr
+          quz1yLO3kX/YoEf807Qj5qIa4h8zgfH4yl+mZvEZjJ8mWc/S7MirH1WsL+lVEE54
+          P0EHEI980OupkIgEMZDTAvpekRXNpBcgTU842e1FaQH8W/x9nI4Tri6mkcLRkb74
+          /lykTwRRTM6r2d5nsaNtITgss0K2yTw7nRv31BgNDK0vr7OU34SrUnjmys792549
+          zpbwm4Z1vYpx/7Po6VtXPqPS/6052A7Q4AIokzCPO+lJjRvNIc6nicrQuFqUByaQ
+          eQIDAQAB
+          -----END PUBLIC KEY-----
+      prefer-token-info: false
+  ignored: /**/*.js,/**/*.css,**/*.png,**/*.jpg
+logging:
+ level:
+  org.springframework.security: DEBUG
